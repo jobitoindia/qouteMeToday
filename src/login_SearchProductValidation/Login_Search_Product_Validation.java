@@ -36,7 +36,7 @@ public class Login_Search_Product_Validation
 		}
 		
 		userName=driver.findElement(By.xpath("//input[@id='ap_email']"));
-		userName.sendKeys("9890713679");
+		userName.sendKeys(prop.getProperty("username"));
 		
 		continueBtn=driver.findElement(By.xpath("//input[@id='continue']"));
 		continueBtn.click();
@@ -51,7 +51,7 @@ public class Login_Search_Product_Validation
 			System.out.println("password field is validated");
 		}
 
-		password.sendKeys("Aditi@77");
+		password.sendKeys(prop.getProperty("password"));
 		submitBtn=driver.findElement(By.xpath("//input[@id='signInSubmit']"));
 		submitBtn.click();
 		
